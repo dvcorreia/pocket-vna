@@ -1,12 +1,11 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import Chart from 'chart.js'
-require('./Chart.Smith.js')
+import './Chart.Smith.js'
 
 export default class SmithChart extends Component{
     componentDidMount(){
-        var ctx = document.getElementById("smith-chart").getContext('2d');
-        var chartInstance = new Chart(ctx, 
-        {
+        const ctx = document.getElementById("smith-chart").getContext('2d');
+        new Chart(ctx, {
             type: 'smith',
             data: {
                 datasets: [{
@@ -38,15 +37,12 @@ export default class SmithChart extends Component{
                     display: false
                 }
             }
-        }
-        );
+        });
     }
     
     render(){
         return(
-            <Fragment>
-                <canvas id="smith-chart" className="extra-large-chart"></canvas>
-            </Fragment>
+            <canvas id="smith-chart" className="extra-large-chart"></canvas>
         )
     }
 } 
