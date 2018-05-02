@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import { Scatter } from 'react-chartjs-2';
 
 export default class PolarGraph extends Component{
@@ -52,13 +52,11 @@ export default class PolarGraph extends Component{
     
     render(){
         return(
-            <Fragment>
-                <Scatter 
-                    data={this.chartData}
-                    options={this.chartOptions}
-                    style={{position: 'absolute'}}
-                />
-            </Fragment>
+            <Scatter
+                data={this.chartData}
+                options={this.chartOptions}
+                style={{position: 'absolute'}}
+            />
         )
     }
 }

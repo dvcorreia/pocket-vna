@@ -3,7 +3,7 @@ import PolarGraph from './Graphs/PolarGraph.jsx'
 import Controls from './Controls.jsx'
 import SmithChart from './Graphs/SmithChart.jsx'
 
-var data =  require("./Graphs/data.json")
+import data from './Graphs/data.json'
 
 export default class Content extends Component{
     render(){
@@ -28,7 +28,7 @@ export default class Content extends Component{
                 <div className="column" style={columnParams}>
                     <Controls />
                     <div style={graphContainer}>
-                        {/*<SmithChart />*/}
+                        <SmithChart />
                     </div>
                 </div>
             </div>

@@ -2,8 +2,8 @@ import React from 'react'
 import FA from 'react-fontawesome'
 
 const End = (props) =>
-<div class="navbar-end">
-    <p class="navbar-item">
+<div className="navbar-end">
+    <p className="navbar-item">
         <strong>v.0.0.1 Alpha</strong>
     </p>
 
