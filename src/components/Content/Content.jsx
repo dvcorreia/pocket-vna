@@ -17,30 +17,26 @@ export default class Content extends Component{
 
         return(
             <Fragment>
-                <div style={{padding: 10}}>
-                    
-                </div>
-
                 <div id="content" className="columns">
                     <div className="column is-three-quarters" style={{
-                        paddingTop: 0,
-                        paddingLeft: 20
+                        padding: 15
                     }}>
-                        <Graph data={data.p11} type="smith" graphType='polar'/>
-                        <Graph data={data.p11} type="polar" graphType='smith'/>
+                        <Graph data={data.p21} graphType='polar'/>
+                        <Graph data={data.p11} graphType='logMag'/>
                     </div>
                     <div className="column" style={{
-                        paddingRight: 25
+                        padding: 25
                     }}>
                         <Search/>
-                        <hr/>
                         <GraphOptions graphName="Graph 1" exp="MHz"/>
-                        <hr/>
                         <GraphOptions graphName="Graph 2" exp="MHz"/>
                     </div>
                 </div>
-
-                
+                <div id="content" className="columns is-centered">
+                    <div className="column is-three-quarters">
+                        <Graph data={data.p11} graphType='smith'/>
+                    </div>
+                </div>
             </Fragment>
         )
     }

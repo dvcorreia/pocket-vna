@@ -11,9 +11,9 @@ export default class End extends React.Component{
         return(
             <div className="navbar-end">
                 <div className="navbar-item">
-                    <a class="button is-success is-rounded is-small">
-                        <span class="icon">
-                        <FA class="fab" name="question-circle"/>
+                    <a className="button is-success is-rounded is-small">
+                        <span className="icon">
+                        <FA className="fab" name="question-circle"/>
                         </span>
                         <span>FAQ</span>
                     </a>

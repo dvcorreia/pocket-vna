@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { Scatter } from 'react-chartjs-2';
 
-export default class PolarGraph extends Component{
+export default class LogMag extends Component{
     state = {
         data: this.props.data
     }
@@ -9,7 +9,7 @@ export default class PolarGraph extends Component{
     chartData = {
         datasets:[
             {
-                label: "S11 Polar Graph",
+                label: "S11 LogMag Graph",
                 fill: false,
                 backgroundColor: this.props.color,
                 pointBorderColor: this.props.color,

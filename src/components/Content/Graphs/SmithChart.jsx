@@ -42,7 +42,12 @@ export default class SmithChart extends Component{
     
     render(){
         return(
-            <canvas id="smith-chart" className="extra-large-chart"></canvas>
+            <div style={{
+                width: '100%',
+                height: 550
+            }}>
+                <canvas id="smith-chart" className="extra-large-chart"></canvas>
+            </div>
         )
     }
 } 

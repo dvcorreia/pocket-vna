@@ -6,21 +6,21 @@ export default class Search extends Component{
     render(){
         return(
             <div>
-                <div class="field is-grouped">
-                    <label class="label">Frequency Band</label>
+                <div className="field is-grouped">
+                    <label className="label">Frequency Band</label>
                     <p className="control" style={{paddingLeft: 5}}>
                         <span className="tag is-danger">MHz</span>
                     </p>
-                    <p class="help">showing 200 points. change in Definitions</p>
+                    <p className="help">showing 200 points. change in Definitions</p>
                 </div>
 
                 <div className="field is-grouped is-horizontal">
                     
                     <p className="control is-expanded">
-                        <input class="input" type="text" placeholder="Minimum"/>
+                        <input className="input" type="text" placeholder="Minimum"/>
                     </p>
                     <p className="control is-expanded">
-                        <input class="input" type="text" placeholder="Maximum"/>
+                        <input className="input" type="text" placeholder="Maximum"/>
                     </p>
 
                     <p className="control">

@@ -1,18 +1,18 @@
 import React, {Component, Fragment} from 'react'
 import PolarGraph from './Graphs/PolarGraph.jsx'
 import SmithChart from './Graphs/SmithChart.jsx'
-import GraphOptions from './Graphs/GraphOptions.jsx'
+import LogMag from './Graphs/LogMag.jsx'
 
 const graphContainer = {
     width: "100%", 
-    height: 200
+    height: 260
 }
 
 export default class Graph extends Component{
 
     state = {
         data: this.props.data,
-        type: this.props.graphType,
+        graphType: this.props.graphType,
         color: "#3273dc"
     }
 
@@ -21,7 +21,9 @@ export default class Graph extends Component{
             case 'smith':
                 return <SmithChart />
             case 'polar':
-                return <PolarGraph data={this.state.data} color={this.state.color}/>
+                return <div style={graphContainer}><PolarGraph data={this.state.data} color={this.state.color}/></div>
+            case 'logMag':
+                return <div style={graphContainer}><LogMag data={this.state.data} color={this.state.color}/></div>
             default: return
         }
     }
@@ -29,9 +31,7 @@ export default class Graph extends Component{
     render(){
         return(
             <Fragment>
-                <div style={graphContainer}>
-                    {this.typeGraphRender(this.state.type)}
-                </div>
+                {this.typeGraphRender(this.state.graphType)}
             </Fragment>
         )
     }
