@@ -3,14 +3,19 @@ import Logo from './Logo.jsx'
 import Start from './Start.jsx'
 import End from './End.jsx'
 
-export default class FrameWindow extends Component{  
+export default class FrameWindow extends Component {
+
+    fileCallBack = (updata) => {
+        this.props.callbackFromParent(updata)
+    }
+
     render() {
-        return(
+        return (
             <nav className="navbar">
                 <Logo />
                 <div className="navbar-menu">
                     <Start />
-                    <End />
+                    <End callbackFromParent={this.fileCallBack} />
                 </div>
             </nav>
         )
