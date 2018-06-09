@@ -1427,20 +1427,13 @@ chart.js@2.4.0:
     chartjs-color "^2.0.0"
     moment "^2.10.6"
 
-chart.js@2.7.2:
-  version "2.7.2"
-  resolved "https://registry.yarnpkg.com/chart.js/-/chart.js-2.7.2.tgz#3c9fde4dc5b95608211bdefeda7e5d33dffa5714"
-  dependencies:
-    chartjs-color "^2.1.0"
-    moment "^2.10.2"
-
 chartjs-color-string@^0.5.0:
   version "0.5.0"
   resolved "https://registry.yarnpkg.com/chartjs-color-string/-/chartjs-color-string-0.5.0.tgz#8d3752d8581d86687c35bfe2cb80ac5213ceb8c1"
   dependencies:
     color-name "^1.0.0"
 
-chartjs-color@^2.0.0, chartjs-color@^2.1.0:
+chartjs-color@^2.0.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/chartjs-color/-/chartjs-color-2.2.0.tgz#84a2fb755787ed85c39dd6dd8c7b1d88429baeae"
   dependencies:
@@ -1641,9 +1634,9 @@ compare-versions@^3.1.0:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/compare-versions/-/compare-versions-3.2.1.tgz#a49eb7689d4caaf0b6db5220173fd279614000f7"
 
-complex.js@2.0.4:
-  version "2.0.4"
-  resolved "https://registry.yarnpkg.com/complex.js/-/complex.js-2.0.4.tgz#d8e7cfb9652d1e853e723386421c1a0ca7a48373"
+complex.js@2.0.10:
+  version "2.0.10"
+  resolved "https://registry.yarnpkg.com/complex.js/-/complex.js-2.0.10.tgz#afac74e4fb9131e8709f9c300420ce58fa36f18d"
 
 component-bind@1.0.0:
   version "1.0.0"
@@ -2978,9 +2971,9 @@ forwarded@~0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/forwarded/-/forwarded-0.1.2.tgz#98c23dab1175657b8c0573e8ceccd91b0ff18c84"
 
-fraction.js@4.0.4:
-  version "4.0.4"
-  resolved "https://registry.yarnpkg.com/fraction.js/-/fraction.js-4.0.4.tgz#04e567110718adf7b52974a10434ab4c67a5183e"
+fraction.js@4.0.8:
+  version "4.0.8"
+  resolved "https://registry.yarnpkg.com/fraction.js/-/fraction.js-4.0.8.tgz#e53618112e3b36b348c61a81323173bceb01e418"
 
 fragment-cache@^0.2.1:
   version "0.2.1"
@@ -3023,6 +3016,12 @@ fs-minipass@^1.2.5:
   resolved "https://registry.yarnpkg.com/fs-minipass/-/fs-minipass-1.2.5.tgz#06c277218454ec288df77ada54a03b8702aacb9d"
   dependencies:
     minipass "^2.2.1"
+
+fs-web@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/fs-web/-/fs-web-1.0.1.tgz#5317e717af94db1687da82a48fc6ee4f808b121b"
+  dependencies:
+    path "git://github.com/component/path#7b4f23c38833a5232cd5e3d50ccb8cd13dbcd2f4"
 
 fs.realpath@^1.0.0:
   version "1.0.0"
@@ -4535,14 +4534,14 @@ math-random@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/math-random/-/math-random-1.0.1.tgz#8b3aac588b8a66e4975e3cdea67f7bb329601fac"
 
-mathjs@^4.0.1:
-  version "4.2.2"
-  resolved "https://registry.yarnpkg.com/mathjs/-/mathjs-4.2.2.tgz#a56785d49ff23da32c1e4eb26763e380592d22ae"
+mathjs@^4.4.2:
+  version "4.4.2"
+  resolved "https://registry.yarnpkg.com/mathjs/-/mathjs-4.4.2.tgz#79a5c8ad92a6434e22dbfac13e223a9bd62d6981"
   dependencies:
-    complex.js "2.0.4"
+    complex.js "2.0.10"
     decimal.js "9.0.1"
     escape-latex "1.0.3"
-    fraction.js "4.0.4"
+    fraction.js "4.0.8"
     javascript-natural-sort "0.7.1"
     seed-random "2.2.0"
     tiny-emitter "2.0.2"
@@ -4728,7 +4727,7 @@ mkdirp@0.5.1, mkdirp@0.5.x, mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0, mkdirp@
   dependencies:
     minimist "0.0.8"
 
-moment@^2.10.2, moment@^2.10.6:
+moment@^2.10.6:
   version "2.22.1"
   resolved "https://registry.yarnpkg.com/moment/-/moment-2.22.1.tgz#529a2e9bf973f259c9643d237fda84de3a26e8ad"
 
@@ -5247,6 +5246,10 @@ path-type@^2.0.0:
   resolved "https://registry.yarnpkg.com/path-type/-/path-type-2.0.0.tgz#f012ccb8415b7096fc2daa1054c3d72389594c73"
   dependencies:
     pify "^2.0.0"
+
+"path@git://github.com/component/path.git#7b4f23c38833a5232cd5e3d50ccb8cd13dbcd2f4":
+  version "1.0.0"
+  resolved "git://github.com/component/path.git#7b4f23c38833a5232cd5e3d50ccb8cd13dbcd2f4"
 
 pbkdf2@^3.0.3:
   version "3.0.16"
@@ -6767,11 +6770,12 @@ sw-toolbox@^3.4.0:
     path-to-regexp "^1.0.1"
     serviceworker-cache-polyfill "^4.0.0"
 
-sxp-to-json@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/sxp-to-json/-/sxp-to-json-0.0.1.tgz#4e64bf55d84c3706f0e80efb603c749463bd1a01"
+sxp-to-json@^0.0.5:
+  version "0.0.5"
+  resolved "https://registry.yarnpkg.com/sxp-to-json/-/sxp-to-json-0.0.5.tgz#9282e41b34fc5cb9748d357761654cb167329214"
   dependencies:
-    mathjs "^4.0.1"
+    fs-web "^1.0.1"
+    mathjs "^4.4.2"
 
 symbol-tree@^3.2.1:
   version "3.2.2"
