@@ -9,10 +9,7 @@ const graphContainer = {
 }
 
 export default class Graph extends Component{
-
-    state = {
-        data: this.props.data,
-        graphType: this.props.graphType,
+    graphDef = {
         color: "#3273dc"
     }
 
@@ -21,9 +18,9 @@ export default class Graph extends Component{
             case 'smith':
                 return <SmithChart />
             case 'polar':
-                return <div style={graphContainer}><PolarGraph data={this.state.data} color={this.state.color}/></div>
+                return <div style={graphContainer}><PolarGraph data={this.props.data} color={this.graphDef.color}/></div>
             case 'logMag':
-                return <div style={graphContainer}><LogMag data={this.state.data} color={this.state.color}/></div>
+                return <div style={graphContainer}><LogMag data={this.props.data} color={this.graphDef.color}/></div>
             default: return
         }
     }
@@ -31,7 +28,7 @@ export default class Graph extends Component{
     render(){
         return(
             <Fragment>
-                {this.typeGraphRender(this.state.graphType)}
+                {this.typeGraphRender(this.props.graphType)}
             </Fragment>
         )
     }

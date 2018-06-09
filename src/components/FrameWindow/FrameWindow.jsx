@@ -10,7 +10,7 @@ export default class FrameWindow extends Component{
                 <Logo />
                 <div className="navbar-menu">
                     <Start />
-                    <End />
+                    <End fileOnUpload={this.props.fileOnUpload}/>
                 </div>
             </nav>
         )

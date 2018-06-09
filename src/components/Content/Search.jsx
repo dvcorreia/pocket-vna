@@ -3,6 +3,30 @@ import FA from 'react-fontawesome'
 
 export default class Search extends Component{
 
+    state = {
+        maxBandwidth: '',
+        minBandwidth: ''
+    }
+
+    onChangeMin = ({target:{value}}) =>{
+        this.setState({
+            minBandwidth: Number(value)
+        })
+    }
+
+    onChangeMax = ({target:{value}}) =>{
+        this.setState({
+            maxBandwidth: Number(value)
+        })
+    }
+
+    changeBW = () => {
+        this.props.onChangeBW({
+            min: this.state.minBandwidth,
+            max: this.state.maxBandwidth
+        })
+    }
+
     render(){
         return(
             <div>
@@ -17,14 +41,26 @@ export default class Search extends Component{
                 <div className="field is-grouped is-horizontal">
                     
                     <p className="control is-expanded">
-                        <input className="input" type="text" placeholder="Minimum"/>
+                        <input 
+                            className="input" 
+                            type="text" 
+                            placeholder="Minimum" 
+                            value={this.state.minBandwidth}
+                            onChange={this.onChangeMin}
+                            />
                     </p>
                     <p className="control is-expanded">
-                        <input className="input" type="text" placeholder="Maximum"/>
+                        <input 
+                            className="input" 
+                            type="text" 
+                            placeholder="Maximum"
+                            value={this.state.maxBandwidth}
+                            onChange={this.onChangeMax}
+                            />
                     </p>
 
                     <p className="control">
-                        <a className="button is-link">Apply</a>
+                        <a className="button is-link" onClick={this.changeBW}>Apply</a>
                     </p>
                 </div>
 

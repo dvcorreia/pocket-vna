@@ -1,22 +1,7 @@
 import React from 'react'
 
-
 const Start = (props) =>
 <div className="navbar-start">
-
-    <div className="navbar-item has-dropdown is-hoverable">
-        <a className="navbar-link">
-            Menu
-        </a>
-        <div className="navbar-dropdown is-boxed">
-            <a className="navbar-item">
-                Themes
-            </a>
-            <a className="navbar-item">
-                Definitions
-            </a>
-        </div>
-    </div>
 
     <div className="navbar-item has-dropdown is-hoverable">
         <a className="navbar-link">
@@ -24,18 +9,39 @@ const Start = (props) =>
         </a>
         <div className="navbar-dropdown is-boxed">
             <a className="navbar-item">
-                Capacitor
+                Coaxial Cable (Open Circuit)
             </a>
             <a className="navbar-item">
-                Coil
+                Coaxial Cable (Closed Circuit)
+            </a>
+            <a className="navbar-item">
+                Coaxial Cable (Transmition)
             </a>
             <hr className="navbar-divider" />
             <a className="navbar-item">
-                Ballun
+                RLC Parallel
             </a>
             <a className="navbar-item">
-                λ/4 Transmition Line
+                RLC Series
             </a>
+            <hr className="navbar-divider" />
+            <a className="navbar-item">
+                Low-Pass Filter with Lumped
+            </a>
+            <a className="navbar-item">
+                Low-Pass Filter with Microstrip
+            </a>
+            <hr className="navbar-divider" />
+            <a className="navbar-item">
+                GSM antenna
+            </a>
+            <a className="navbar-item">
+                Dipole antenna
+            </a>
+            <a className="navbar-item">
+                Patch antenna
+            </a>
+
         </div>
     </div>
 </div>

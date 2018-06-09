@@ -1,17 +1,22 @@
-import React from 'react'
+import React, { Component } from 'react'
 import FA from 'react-fontawesome'
+import FAQModel from './FAQModal.jsx'
 
-export default class End extends React.Component{
+export default class End extends Component{
 
-    fileSelectHandler = event => {
-        console.log(event.target.files[0])
+    state = { showFAQModel: false }
+
+    handleToggleFAQModel = () =>{
+        this.setState({
+            showFAQModel: !this.state.showFAQModel
+        })
     }
 
     render(){
         return(
             <div className="navbar-end">
                 <div className="navbar-item">
-                    <a className="button is-success is-rounded is-small">
+                    <a className="button is-success is-rounded is-small" onClick={this.handleToggleFAQModel}>
                         <span className="icon">
                         <FA className="fab" name="question-circle"/>
                         </span>
@@ -19,12 +24,14 @@ export default class End extends React.Component{
                     </a>
                 </div>
 
+            <FAQModel active={this.state.showFAQModel} onToggle={this.handleToggleFAQModel}/>
+
                 <div className="navbar-item">
                     <div className="field is-grouped">
 
                         <div className="file">
                             <label className="file-label">
-                                <input className="file-input" type="file" name="resume" onChange={this.fileSelectHandler} />
+                                <input className="file-input" type="file" name="resume" onChange={this.props.fileOnUpload} />
                                 <span className="file-cta">
                                 <span className="file-icon">
                                     <FA name="upload" />
