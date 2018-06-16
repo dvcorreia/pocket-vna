@@ -39,13 +39,18 @@ export default class SmithChart extends Component{
     componentDidUpdate(prevProps, prevState, snapshot){
         if(prevProps.data !== this.props.data){
             let datap = []
+            let smithData = this.props.data.ZIN()
 
-            for(var i = 0 ; i < this.props.data.length ; i++ ){
+            console.log(smithData)
+            
+            for(var i = 0 ; i < smithData.length ; i++ ){
                 datap.push({
-                    real: this.props.data[i].x,
-                    imag: this.props.data[i].y
+                    real: smithData[i].re,
+                    imag: smithData[i].im
                 })
             }
+
+            console.log(datap)
             
             this.setState(
                 Object.assign({}, prevState, {

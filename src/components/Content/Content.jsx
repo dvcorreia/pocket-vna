@@ -52,7 +52,7 @@ export default class Content extends Component{
                 <div id="content" className="columns is-centered">
                     <div className="column is-three-quarters">
                         <SmithChart 
-                            data={this.props.data.p11}
+                            data={this.props.data}
 							color={this.state.color}
 							param={11}
                         />

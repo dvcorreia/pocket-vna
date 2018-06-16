@@ -6785,9 +6785,9 @@ sw-toolbox@^3.4.0:
     path-to-regexp "^1.0.1"
     serviceworker-cache-polyfill "^4.0.0"
 
-sxp-to-json@^0.0.5:
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/sxp-to-json/-/sxp-to-json-0.0.5.tgz#9282e41b34fc5cb9748d357761654cb167329214"
+sxp-to-json@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/sxp-to-json/-/sxp-to-json-1.0.3.tgz#ecb1c506054675d8eae2a9f0de228df49cecb065"
   dependencies:
     fs-web "^1.0.1"
     mathjs "^4.4.2"

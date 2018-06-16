@@ -51,7 +51,7 @@ export default class LogMag extends Component{
             const div = Math.floor(this.props.data.freq.length / 500)
 
             this.props.data.LogMag(this.props.param).forEach((value, i) => {
-                if(i%div == 0){
+                if(i%div === 0){
                     dataUpdate.push({
                         x: this.props.data.freq[i],
                         y: value

@@ -13,7 +13,7 @@
     "react-dom": "^16.3.2",
     "react-fontawesome": "^1.6.1",
     "react-scripts": "1.1.4",
-    "sxp-to-json": "^0.0.5",
+    "sxp-to-json": "^1.0.3",
     "uppy": "^0.24.4"
   },
   "resolutions": {
