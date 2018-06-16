@@ -28,9 +28,7 @@ export default class App extends Component {
         return x.charAt(0) !== '!'
       });
       this.setState({ data: new sxp(null, lines) })
-      console.log(this.state.data)
     };
-
     reader.readAsText(file.target.files[0])
   }
 

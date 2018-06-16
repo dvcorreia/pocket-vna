@@ -1,42 +1,73 @@
 import React, { Component } from 'react'
 import Chart from 'chart.js'
 import './Chart.Smith.js'
+import hexToRgba from 'hex-rgba'
+
+var chartObj
 
 export default class SmithChart extends Component{
+    state = {
+        chartData:{
+            datasets: [{
+                label: 'none',
+                borderColor: this.props.color,
+                pointBackgroundColor: this.props.color,
+                backgroundColor: hexToRgba(this.props.color, 100),
+                borderWidth: 2,
+                fill: false,
+                radius: 0,
+                hitRadius: 3,
+                data: [],
+            }]
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'Smith Chart'
+            },
+            legend: {
+                display: true
+            }
+        },
+    }
+
+    updateChartData(chart, data) {
+        chart.data.datasets[0].data = data
+        chart.update()
+    }
+
+    componentDidUpdate(prevProps, prevState, snapshot){
+        if(prevProps.data !== this.props.data){
+            let datap = []
+
+            for(var i = 0 ; i < this.props.data.length ; i++ ){
+                datap.push({
+                    real: this.props.data[i].x,
+                    imag: this.props.data[i].y
+                })
+            }
+            
+            this.setState(
+                Object.assign({}, prevState, {
+                    chartData: {
+                        label: ("Data: " + this.props.param),
+                        datasets:[
+                            Object.assign({}, prevState.chartData.datasets[0],{ data: datap })
+                        ]
+                    }
+                })
+            )
+            
+            this.updateChartData(chartObj, datap)
+        }
+    }
+
     componentDidMount(){
         const ctx = document.getElementById("smith-chart").getContext('2d');
-        new Chart(ctx, {
+        chartObj = new Chart(ctx, {
             type: 'smith',
-            data: {
-                datasets: [{
-                    data: [{
-                        real: 0.1,
-                        imag: 0
-                    }, {
-                        real: 1,
-                        imag: 0
-                    }, {
-                        real: 0,
-                        imag: -1
-                    }, {
-                        real: 20,
-                        imag: 0
-                    }],
-                    label: 'Dataset 1',
-                    borderColor: '#36A2EB',
-                    pointBackgroundColor: '#36A2EB',
-                    backgroundColor: 'rgba(54,162,235, 0.4)'
-                }]
-            },
-            options: {
-                title: {
-                    display: true,
-                    text: 'Smith Chart Extension'
-                },
-                legend: {
-                    display: false
-                }
-            }
+            data: this.state.chartData,
+            options: this.state.options
         });
     }
     

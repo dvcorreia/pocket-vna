@@ -12,8 +12,8 @@ const graphContainer = {
 
 export default class Content extends Component{
     state = {
-        color: "#3273dc"
-    }
+        color: '#3273dc'
+	}
 
     render(){
         return(
@@ -23,14 +23,18 @@ export default class Content extends Component{
 
                         <div style={graphContainer}>
                             <LogMag 
-                                data={this.props.data.p11} 
-                                color={this.state.color}/>
+                                data={this.props.data} 
+                                color={this.state.color}
+								param={11}	
+							/>
                         </div>
 
                         <div style={graphContainer}>
                             <LogMag 
-                                data={this.props.data.p11} 
-                                color={this.state.color}/>
+                                data={this.props.data} 
+                                color={this.state.color}
+								param={21}	
+							/>
                         </div>
 
                     </div>
@@ -47,7 +51,11 @@ export default class Content extends Component{
 
                 <div id="content" className="columns is-centered">
                     <div className="column is-three-quarters">
-                        <SmithChart />
+                        <SmithChart 
+                            data={this.props.data.p11}
+							color={this.state.color}
+							param={11}
+                        />
                     </div>
                 </div>
             </Fragment>
