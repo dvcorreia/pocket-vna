@@ -19,5 +19,6 @@ You must have **npm** and **yarn** installed.
 ```bash
 >> git clone --depth=1 --branch=master https://github.com/dvcorreia/pocket-vna.git
 >> cd pocket-vna
+>> yarn install
 >> yarn start
 ```
