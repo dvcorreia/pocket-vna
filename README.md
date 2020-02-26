@@ -1,4 +1,4 @@
-<p align="center"><a href="https://dvcorreia.github.io/pocket-vna/" target="_blank"><img height="60" src="./src/assets/logo.png" alt="pocketvna-logo"></a>
+<p align="center"><a href="https://dvcorreia.github.io/pocket-vna/" target="_blank"><img height="60" src="https://github.com/dvcorreia/pocket-vna/blob/master/client/src/assets/logo.png" alt="pocketvna-logo"></a>
 </p>
 
 <p align="center">
@@ -7,10 +7,11 @@
 
 ## Status
 
-__The application is still in development!__ Feel free to join us.
+__The application development was dropped!__ Feel free grab the project for developent.
+The development idea stoped when was decided to drop the dependency of the front-end logic library (sXp-to-json) and make a server for it.
 
 We have been developing in parallel with the app a library to read and process **Touchstone files** called **sXp-to-json**,
-fell free to check it out here [https://github.com/joaompsantos/sXp-to-json/tree/dev](https://github.com/joaompsantos/sXp-to-json/tree/dev) (it isn't in npm yet).
+fell free to check it out here [https://github.com/joaompsantos/sXp-to-json/tree/dev](https://github.com/joaompsantos/sXp-to-json/tree/dev).
 
 ## To run
 
